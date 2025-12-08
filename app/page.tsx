@@ -11,7 +11,7 @@ export default function LaBreche() {
   const { articles, loading, error, fetchArticles } = useFetchArticles();
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-breche-cream">
       <div className="max-w-3xl mx-auto px-4 py-8 sm:py-12">
         <Header />
         <SocialLinks />

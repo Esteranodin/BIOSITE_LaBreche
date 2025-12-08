@@ -1,23 +1,23 @@
-import { Podcast, Heart, Mail } from 'lucide-react';
+import { Podcast, Heart, Mail, HandCoins, MailIcon, MailQuestion, MailboxIcon, MailPlus, MailPlusIcon, HousePlus } from 'lucide-react';
 
 const mainLinks = [
   {
-    title: "💳 S'abonner",
+    title: "S'abonner",
     url: "https://www.helloasso.com/associations/journal-la-breche/boutiques/formulaire-d-abonnement",
-    icon: Podcast,
-    color: "bg-emerald-600 hover:bg-emerald-700"
+    icon: HousePlus,
+    color: "bg-breche-blue"
   },
   {
-    title: "❤️ Faire un don",
+    title: "Faire un don",
     url: "https://donorbox.org/la-breche",
-    icon: Heart,
-    color: "bg-red-600 hover:bg-red-700"
+    icon: HandCoins,
+    color: "bg-breche-rose"
   },
   {
-    title: "📧 Newsletter",
+    title: "Newsletter",
     url: "#",
-    icon: Mail,
-    color: "bg-blue-600 hover:bg-blue-700"
+    icon: MailPlus,
+    color: "bg-breche-green"
   }
 ];
 
@@ -30,8 +30,9 @@ export function MainLinks() {
           href={link.url}
           target="_blank"
           rel="noopener noreferrer"
-          className={`block w-full py-4 px-6 rounded-full text-white font-semibold text-center transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02] ${link.color}`}
+          className={`block py-4 px-6 rounded-full text-white font-semibold text-center transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02] ${link.color}`}
         >
+          <link.icon className="inline mr-3" size={25} />
           {link.title}
         </a>
       ))}
