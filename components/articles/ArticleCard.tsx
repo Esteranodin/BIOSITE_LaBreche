@@ -1,5 +1,5 @@
 import { Article } from "../../types/Article";
-import { getArticleColor } from "../../utils/colorUtils";
+import { getArticleColor } from "../../utils/colorRandom";
 import { ArticleOverlay } from "./ArticleOverlay";
 import { ArticlePlaceholder } from "./ArticlePlaceholder";
 
