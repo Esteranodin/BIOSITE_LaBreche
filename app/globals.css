@@ -1,32 +1,38 @@
 @import "tailwindcss";
 
 @theme {
-  --color-breche-rose: #EFC7C2;
-  --color-breche-green: #D3F9B5;
-  --color-breche-mint: #E2FCEF;
-  --color-breche-blue: #0FA3B1;
+  /* Couleurs de base (ne changent jamais) */
+  --color-blanc-casse: #FFF8F8;
+  --color-noir-bleute: #00111B;
+  --color-framboise: #DD2D4A;
+  --color-vert: #15B097;
+  --color-bleu: #087E8B;
 }
 
 :root {
-  --gradient-1: linear-gradient(135deg, #EFC7C2 0%, rgba(239, 199, 194, 0.8) 100%);
-  --gradient-2: linear-gradient(135deg, #D3F9B5 0%, rgba(211, 249, 181, 0.8) 100%);
-  --gradient-3: linear-gradient(135deg, #E2FCEF 0%, rgba(226, 252, 239, 0.8) 100%);
-  --gradient-4: linear-gradient(135deg, #60a5fa 0%, #2563eb 100%);
-  --gradient-5: linear-gradient(135deg, #a78bfa 0%, #7c3aed 100%);
-  --gradient-6: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
-  --gradient-7: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
-  --gradient-8: linear-gradient(135deg, #818cf8 0%, #4f46e5 100%);
+  /* Variables sémantiques pour mode clair */
+  --color-bg-primary: #FFF8F8;
+  --color-text-primary: #00111B;
+  --color-text-secondary: color-mix(in srgb, #00111B 60%, #FFF8F8);
+  --color-border: color-mix(in srgb, #00111B 20%, #FFF8F8);
+  --color-gris-clair: color-mix(in srgb, #00111B 20%, #FFF8F8);
+  --color-gris-moyen: color-mix(in srgb, #00111B 60%, #FFF8F8);
 }
 
-/* PENSER A AJOUTER switch thème en changeant pour le logo sur fond blanc */
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Variables sémantiques pour mode sombre (inversées) */
+    --color-bg-primary: #00111B;
+    --color-text-primary: #FFF8F8;
+    --color-text-secondary: color-mix(in srgb, #FFF8F8 60%, #00111B);
+    --color-border: color-mix(in srgb, #FFF8F8 20%, #00111B);
+    --color-gris-clair: color-mix(in srgb, #FFF8F8 20%, #00111B);
+    --color-gris-moyen: color-mix(in srgb, #FFF8F8 60%, #00111B);
   }
-} */
+}
 
 body {
-  background: #FAFAF9;
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
   font-family: var(--font-robotoFlex), sans-serif;
 }

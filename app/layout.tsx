@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Roboto_Flex} from "next/font/google";
+import {Roboto_Flex} from "next/font/google";
 import "./globals.css";
 
 const robotoFlex = Roboto_Flex({

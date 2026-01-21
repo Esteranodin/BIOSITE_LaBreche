@@ -1,28 +1,63 @@
-import { Instagram, Facebook, Linkedin, Twitter, Mail } from 'lucide-react';
+import {
+  FaInstagram,
+  FaFacebook,
+  FaLinkedinIn,
+  FaXTwitter,
+} from "react-icons/fa6";
+import { HiMail } from "react-icons/hi";
 
 const socialLinks = [
-  { icon: Instagram, url: "https://www.instagram.com/LaBrecheJournal", label: "Instagram", color: "hover:text-pink-600" },
-  { icon: Facebook, url: "https://www.facebook.com/journallabreche", label: "Facebook", color: "hover:text-blue-600" },
-  { icon: Linkedin, url: "https://www.linkedin.com/company/labrèche", label: "LinkedIn", color: "hover:text-blue-700" },
-  { icon: Twitter, url: "#", label: "Twitter", color: "hover:text-sky-500" },
-  { icon: Mail, url: "mailto:redaction.labreche@protonmail.com", label: "Email", color: "hover:text-gray-700" }
+  {
+    name: "Instagram",
+    icon: FaInstagram,
+    url: "https://www.instagram.com/journallabreche",
+    color: "var(--color-framboise)",
+  },
+  {
+    name: "Facebook",
+    icon: FaFacebook,
+    url: "https://www.facebook.com/journallabreche",
+    color: "var(--color-bleu)",
+  },
+  {
+    name: "LinkedIn",
+    icon: FaLinkedinIn,
+    url: "https://www.linkedin.com/company/journal-la-br%C3%A8che/",
+    color: "var(--color-vert)",
+  },
+  {
+    name: "X (Twitter)",
+    icon: FaXTwitter,
+    url: "https://twitter.com/journallabreche",
+    color: "var(--color-bleu)",
+  },
+  {
+    name: "Email",
+    icon: HiMail,
+    url: "mailto:contact@labreche.info",
+    color: "var(--color-framboise)",
+  },
 ];
 
 export function SocialLinks() {
   return (
     <div className="flex justify-center gap-4 mb-8">
-      {socialLinks.map((social, idx) => (
-        <a
-          key={idx}
-          href={social.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={social.label}
-          className={`w-12 h-12 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-600 transition-all ${social.color}`}
-        >
-          <social.icon size={20} />
-        </a>
-      ))}
+      {socialLinks.map((social) => {
+        const Icon = social.icon;
+        return (
+          <a
+            key={social.name}
+            href={social.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-3 rounded-full transition-transform hover:scale-110 shadow-md"
+            style={{ backgroundColor: social.color }}
+            aria-label={social.name}
+          >
+            <Icon className="w-6 h-6" color="var(--color-blanc-casse)" />
+          </a>
+        );
+      })}
     </div>
   );
 }

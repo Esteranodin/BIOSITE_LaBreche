@@ -64,13 +64,11 @@ function parseRSS(xmlText) {
     // Extraire l'image (plusieurs formats possibles dans WordPress)
     let image = '';
     
-    // 1. Chercher media:content
     const mediaMatch = itemContent.match(/<media:content[^>]*url="([^"]+)"/);
     if (mediaMatch) {
       image = mediaMatch[1];
     }
     
-    // 2. Chercher enclosure
     if (!image) {
       const enclosureMatch = itemContent.match(/<enclosure[^>]*url="([^"]+)"[^>]*type="image/);
       if (enclosureMatch) {
@@ -78,7 +76,6 @@ function parseRSS(xmlText) {
       }
     }
     
-    // 3. Chercher dans le contenu encoded (content:encoded)
     if (!image) {
       const contentMatch = itemContent.match(/<content:encoded><!\[CDATA\[([\s\S]*?)\]\]><\/content:encoded>/);
       if (contentMatch) {
@@ -88,7 +85,6 @@ function parseRSS(xmlText) {
           image = imgMatch[1];
         }
         
-        // Si pas d'image img, chercher les balises picture
         if (!image) {
           const pictureMatch = contentMatch[1].match(/<picture[^>]*>[\s\S]*?<img[^>]*src="([^"]+)"/);
           if (pictureMatch) {
@@ -98,7 +94,6 @@ function parseRSS(xmlText) {
       }
     }
     
-    // 4. Chercher dans la description
     if (!image && descMatch) {
       const imgMatch = descMatch[1].match(/<img[^>]*src="([^"]+)"/);
       if (imgMatch) {
@@ -129,12 +124,15 @@ function parseRSS(xmlText) {
     const displayImage = Boolean((isPodcast || isWhitelisted) && image);
     // Ajouter l'article seulement s'il a au minimum un titre et un lien
     if (title && link) {
+      // nettoyage code html dans le titre
+      const decodedTitle = decodeHtmlEntities(title);
+
       articles.push({
-        title,
+        title: decodedTitle, 
         description,
         link,
         category,
-        image: image || '', // Image vide si non trouvée (un fallback sera appliqué côté client)
+        image: image || '', 
         isPodcast: Boolean(isPodcast),
         displayImage: Boolean(displayImage)
       });
@@ -144,6 +142,21 @@ function parseRSS(xmlText) {
   return articles;
 }
 
-// Configuration pour Next.js
+// Ajouter cette nouvelle fonction
+function decodeHtmlEntities(text) {
+  const entities = {
+    '&#8217;': "'",
+    '&#8216;': "'",
+    '&#8220;': '"',
+    '&#8221;': '"',
+    '&amp;': '&',
+    '&lt;': '<',
+    '&gt;': '>',
+    '&quot;': '"',
+    '&#039;': "'",
+  };
+  
+  return text.replace(/&#?\w+;/g, (match) => entities[match] || match);
+}
+
 export const dynamic = 'force-dynamic'; // Désactive le cache pour toujours avoir les derniers articles
-// export const revalidate = 3600; // Ou mettre en cache pendant 1 heure (3600 secondes)
