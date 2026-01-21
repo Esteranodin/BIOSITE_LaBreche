@@ -1,10 +1,10 @@
 "use client";
 
-import { Header } from "../components/Header";
-import { SocialLinks } from "../components/SocialLinks";
-import { MainLinks } from "../components/MainLinks";
-import { ArticlesGrid } from "../components/GridArticles";
-import { Footer } from "../components/Footer";
+import { Header } from "../components/layout/Header";
+import { SocialLinks } from "../components/links/SocialLinks";
+import { MainLinks } from "../components/links/MainLinks";
+import { ArticlesGrid } from "../components/articles/ArticlesGrid";
+import { Footer } from "../components/layout/Footer";
 import { useFetchArticles } from "../hooks/useFetchArticles";
 import { HiExternalLink } from 'react-icons/hi';
 

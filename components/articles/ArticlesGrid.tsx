@@ -1,6 +1,6 @@
 import { HiRefresh } from "react-icons/hi";
-import { Article } from "../types/Article";
-import { ArticleCard } from "./CardArticles";
+import { Article } from "../../types/Article";
+import { ArticleCard } from "./ArticleCard";
 
 interface ArticlesGridProps {
   articles: Article[];

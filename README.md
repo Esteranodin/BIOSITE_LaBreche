@@ -12,10 +12,12 @@ Technologies principales : Next.js (app router), React, TypeScript (TSX), Tailwi
 
 ## Structure importante
 
-- `app/page.tsx` : page principale qui compose les composants.
-- `app/components/` : composants UI (Header, ArticlesGrid, SocialLinks...).
-- `app/hooks/useFetchArticles.ts` : hook client pour appeler l'API RSS interne.
-- `app/api/rss/route.js` : route API qui récupère et parse le flux RSS distant et expose `isPodcast` / `displayImage`.
+- `app/page.tsx` : page principale.
+- `app/layout.tsx` : layout global de l’application.
+- `app/api/rss/route.js` : route API qui récupère et parse le flux RSS distant.
+- `components/` : composants UI réutilisables.
+- `hooks/useFetchArticles.ts` : hook client pour appeler l'API RSS interne.
+- `public/` : fichiers statiques (images, favicon, etc).
 
 ---
 
@@ -35,7 +37,7 @@ Ouvrir ensuite http://localhost:3000 dans votre navigateur
 
 ## Notes
 
-- Centralisation de la logique métier côté serveur (ici la détection `isPodcast` et `displayImage` est faite dans `app/api/rss/route.js`).
+- Le flux RSS est récupéré depuis `https://labreche.fr/feed/` (modifiable dans `app/api/rss/route.js`).
 - Ne jamais stocker de secrets dans le dépôt (utilisez des variables d'environnement et `.env.local` non committé).
 
 ---
