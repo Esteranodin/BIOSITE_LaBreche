@@ -34,7 +34,7 @@ const socialLinks = [
   {
     name: "Email",
     icon: HiMail,
-    url: "mailto:contact@labreche.info",
+    url: "mailto:redaction.labreche@protonmail.com",
     color: "var(--color-framboise)",
   },
 ];
