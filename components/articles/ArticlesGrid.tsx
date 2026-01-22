@@ -1,5 +1,5 @@
 import { HiRefresh } from "react-icons/hi";
-import { Article } from "../../types/Article";
+import { Article } from "@/types";
 import { ArticleCard } from "./ArticleCard";
 
 interface ArticlesGridProps {
@@ -48,7 +48,7 @@ export function ArticlesGrid({
 
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
-      {articles.map((article, idx) => (
+      {articles.map((article: Article, idx: number) => (
         <ArticleCard key={idx} article={article} idx={idx} />
       ))}
     </div>

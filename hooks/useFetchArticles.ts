@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
+import { Article } from "@/types";
 
-interface Article {
-  title: string;
-  link: string;
-  image?: string;
-  category?: string;
-  displayImage?: boolean;
+interface UseFetchArticlesReturn {
+  articles: Article[];
+  loading: boolean;
+  error: string | null;
+  fetchArticles: () => Promise<void>;
 }
 
-export function useFetchArticles() {
+export function useFetchArticles(): UseFetchArticlesReturn {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);

@@ -1,6 +1,7 @@
+import { MainLink } from "@/types";
 import { HiHome, HiHeart, HiMail } from "react-icons/hi";
 
-const mainLinks = [
+const mainLinks: MainLink[] = [
   {
     title: "S'abonner",
     url: "https://www.helloasso.com/associations/journal-la-breche/boutiques/formulaire-d-abonnement",
