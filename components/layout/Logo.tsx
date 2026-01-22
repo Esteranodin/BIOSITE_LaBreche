@@ -32,7 +32,7 @@ export function Logo({ className }: LogoProps) {
 
   const getLogoSrc = () => {
     if (isMobile) return "/LogoRS.png"; 
-    return isDark ? "Logo RS_sans-fond.png" : "/LogoFondNoir.png"; 
+    return isDark ? "Logo-fd-blanc.png" : "/LogoFondNoir.png"; 
   };
 
   return (
