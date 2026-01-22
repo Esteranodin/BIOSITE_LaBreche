@@ -4,9 +4,10 @@ import {
   FaLinkedinIn,
   FaXTwitter,
 } from "react-icons/fa6";
-import { HiMail } from "react-icons/hi";
+import { BiMailSend } from "react-icons/bi";
+import { SocialLink } from "@/types";
 
-const socialLinks = [
+const socialLinks: SocialLink[] = [
   {
     name: "Instagram",
     icon: FaInstagram,
@@ -33,7 +34,7 @@ const socialLinks = [
   },
   {
     name: "Email",
-    icon: HiMail,
+    icon: BiMailSend,
     url: "mailto:contact@labreche.info",
     color: "var(--color-framboise)",
   },
@@ -42,7 +43,7 @@ const socialLinks = [
 export function SocialLinks() {
   return (
     <div className="flex justify-center gap-4 mb-8">
-      {socialLinks.map((social) => {
+      {socialLinks.map((social: SocialLink) => {
         const Icon = social.icon;
         return (
           <a
@@ -50,11 +51,13 @@ export function SocialLinks() {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full transition-transform hover:scale-110 shadow-md"
-            style={{ backgroundColor: social.color }}
+            className="flex items-center justify-center w-12 h-12 rounded-full border-3 transition-transform hover:scale-110 shadow-md"
+            style={{ 
+              backgroundColor:"var(--color-blanc-casse)",
+              borderColor: social.color }}
             aria-label={social.name}
           >
-            <Icon className="w-6 h-6" color="var(--color-blanc-casse)" />
+            <Icon className="w-6 h-6 text-noir-bleute" />
           </a>
         );
       })}

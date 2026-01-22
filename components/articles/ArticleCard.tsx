@@ -1,15 +1,14 @@
-import { Article } from "../../types/Article";
+import { Article } from "@/types";
 import { getArticleColor } from "../../utils/colorUtils";
 import { ArticleOverlay } from "./ArticleOverlay";
 import { ArticlePlaceholder } from "./ArticlePlaceholder";
 
-export function ArticleCard({
-  article,
-  idx,
-}: {
+interface ArticleCardProps {
   article: Article;
   idx: number;
-}) {
+}
+
+export function ArticleCard({ article, idx }: ArticleCardProps) {
   const hasImage = article.displayImage && article.image;
   const borderColor = getArticleColor(idx, article.title?.length || 0);
 
