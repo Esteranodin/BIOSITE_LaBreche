@@ -1,23 +1,24 @@
 import { MainLink } from "@/types";
-import { HiHome, HiHeart, HiMail } from "react-icons/hi";
+import { PiHandHeartFill } from "react-icons/pi";
+import { GiLetterBomb, GiNewspaper   } from "react-icons/gi";
 
 const mainLinks: MainLink[] = [
   {
     title: "S'abonner",
     url: "https://www.helloasso.com/associations/journal-la-breche/boutiques/formulaire-d-abonnement",
-    icon: HiHome,
+    icon: GiNewspaper ,
     color: "var(--color-bleu)",
   },
   {
     title: "Faire un don",
     url: "https://donorbox.org/la-breche",
-    icon: HiHeart,
+    icon: PiHandHeartFill,
     color: "var(--color-framboise)",
   },
   {
     title: "Newsletter",
     url: "#",
-    icon: HiMail,
+    icon: GiLetterBomb ,
     color: "var(--color-vert)",
   },
 ];

@@ -12,7 +12,7 @@ const socialLinks: SocialLink[] = [
     name: "Instagram",
     icon: FaInstagram,
     url: "https://www.instagram.com/journallabreche",
-    color: "var(--color-bleu)",
+    color: "var(--color-framboise)",
   },
   {
     name: "Facebook",
