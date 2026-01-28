@@ -15,12 +15,12 @@ const mainLinks: MainLink[] = [
     icon: PiHandHeartFill,
     color: "var(--color-framboise)",
   },
-  // {
-  //   title: "Newsletter",
-  //   url: "#",
-  //   icon: GiLetterBomb ,
-  //   color: "var(--color-vert)",
-  // },
+  {
+    title: "Newsletter",
+    url: "#",
+    icon: GiLetterBomb ,
+    color: "var(--color-vert)",
+  },
 ];
 
 export function MainLinks() {
@@ -34,10 +34,10 @@ export function MainLinks() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 py-4 px-6 rounded-full font-semibold transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02]"
+            className="flex items-center justify-center gap-3 py-4 px-6 rounded-full font-semibold tracking-wider transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02]"
             style={{
               backgroundColor: link.color,
-              color: "var(--color-blanc-casse)",
+              color: "var(--color-text-primary)",
             }}
           >
             <Icon className="w-6 h-6" />

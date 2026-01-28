@@ -50,7 +50,7 @@ const socialLinks: SocialLink[] = [
 
 export function SocialLinks() {
   return (
-    <div className="flex justify-center gap-4 mb-8">
+    <div className="flex justify-center gap-4 mb-8 wrap-under390">
       {socialLinks.map((social: SocialLink) => {
         const Icon = social.icon;
         return (

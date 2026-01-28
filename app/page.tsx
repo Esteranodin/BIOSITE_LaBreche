@@ -25,7 +25,7 @@ export default function LaBreche() {
             <div className="w-full border-t border-[var(--color-border)]"></div>
           </div>
           <div className="relative flex justify-center text-sm">
-            <span className="px-4 bg-[var(--color-bg-primary)] text-[var(--color-text-secondary)] font-medium">
+            <span className="px-4 bg-[var(--color-bg-primary)] text-[var(--color-text-secondary)] tracking-wide font-bold">
               Derniers articles
             </span>
           </div>
@@ -43,7 +43,7 @@ export default function LaBreche() {
             href="https://journal-labreche.fr"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 py-3 px-6 rounded-full border-2 border-[var(--color-border)] hover:border-[var(--color-gris-moyen)] transition-all font-semibold"
+            className="inline-flex items-center gap-2 py-3 px-6 rounded-full border-2 border-[var(--color-gris-moyen)] hover:border-[var(--color-border)] transition-all font-semibold"
           >
             Voir tous les articles <HiExternalLink className="w-4 h-4" />
           </a>
