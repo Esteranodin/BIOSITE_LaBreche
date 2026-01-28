@@ -37,7 +37,7 @@ const socialLinks: SocialLink[] = [
   {
     name: "Nous contacter par email",
     icon: BiMailSend,
-    url: "mailto:contact@labreche.info",
+    url: "mailto:redaction.labreche@protonmail.com",
     color: "var(--color-framboise)",
   },
   {
