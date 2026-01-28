@@ -17,7 +17,7 @@ export function ArticleCard({ article, idx }: ArticleCardProps) {
       href={article.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.03] h-full w-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-focus)] focus-visible:ring-offset-3"
+      className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.03] h-full w-full focus-visible:outline-none focus-visible:ring-4 focus-visible:riqng-[var(--color-focus)] focus-visible:ring-offset-3"
       style={{
         border: `3px solid ${borderColor}`,
         background: "none",
