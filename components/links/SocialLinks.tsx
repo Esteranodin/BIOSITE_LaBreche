@@ -59,7 +59,7 @@ export function SocialLinks() {
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 rounded-full border-3 transition-transform hover:scale-110 shadow-md"
+              className="flex items-center justify-center w-12 h-12 rounded-full border-3 transition-transform hover:scale-110 shadow-md focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-focus)] focus-visible:ring-offset-3"
               style={{ 
                 backgroundColor:"var(--color-blanc-casse)",
                 borderColor: social.color }}
@@ -67,12 +67,12 @@ export function SocialLinks() {
             >
               <Icon className="w-6 h-6 text-noir-bleute" />
             </a>
-            <span
+            <h3
               className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 pointer-events-none shadow transition-opacity z-10"
               style={{ whiteSpace: "nowrap", top: "100%" }}
             >
               {social.name}
-            </span>
+            </h3>
           </div>
         );
       })}

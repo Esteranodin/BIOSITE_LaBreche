@@ -47,10 +47,12 @@ export function ArticlesGrid({
   }
 
   return (
-    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-10">
+    <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 mb-10 list-none p-0 m-0">
       {articles.map((article: Article, idx: number) => (
-        <ArticleCard key={idx} article={article} idx={idx} />
+        <li key={idx} className="relative flex items-stretch h-full w-full">
+          <ArticleCard article={article} idx={idx} />
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }

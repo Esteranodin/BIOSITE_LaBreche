@@ -17,11 +17,14 @@ export function ArticleCard({ article, idx }: ArticleCardProps) {
       href={article.link}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.03]"
+      className="group relative aspect-square rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 hover:scale-[1.03] h-full w-full focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-focus)] focus-visible:ring-offset-3"
       style={{
-        border: `2px solid ${borderColor}`,
+        border: `3px solid ${borderColor}`,
         background: "none",
+        transition: "border-color 0.4s cubic-bezier(0.4,0,0.2,1)",
       }}
+      onMouseEnter={(e) => (e.currentTarget.style.borderColor = "transparent")}
+      onMouseLeave={(e) => (e.currentTarget.style.borderColor = borderColor)}
     >
       {hasImage ? (
         <>
@@ -29,11 +32,16 @@ export function ArticleCard({ article, idx }: ArticleCardProps) {
             src={article.image}
             alt={article.title}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            style={{ willChange: "transform, opacity" }}
+            loading="lazy"
             onError={(e) => {
               e.currentTarget.style.display = "none";
             }}
           />
-          <ArticleOverlay title={article.title} showTitle={true} />
+          <ArticleOverlay
+            title={article.title}
+            showTitle={true}
+          />
         </>
       ) : (
         <ArticlePlaceholder title={article.title} borderColor={borderColor} />
