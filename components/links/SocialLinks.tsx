@@ -68,7 +68,7 @@ export function SocialLinks() {
               <Icon className="w-6 h-6 text-noir-bleute" />
             </a>
             <span
-              className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 rounded bg-white text-xs text-noir-bleute opacity-0 group-hover:opacity-100 pointer-events-none shadow transition-opacity z-10"
+              className="absolute left-1/2 -translate-x-1/2 mt-2 px-2 py-1 rounded text-xs opacity-0 group-hover:opacity-100 pointer-events-none shadow transition-opacity z-10"
               style={{ whiteSpace: "nowrap", top: "100%" }}
             >
               {social.name}

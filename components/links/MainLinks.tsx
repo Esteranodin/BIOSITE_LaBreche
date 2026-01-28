@@ -34,10 +34,10 @@ export function MainLinks() {
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-3 py-4 px-6 rounded-full font-semibold tracking-wider transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02]"
+            className="flex items-center justify-center gap-3 py-4 px-6 rounded-full text-lg font-semibold tracking-wide transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02]"
             style={{
               backgroundColor: link.color,
-              color: "var(--color-text-primary)",
+              color: "var(--color-icon)",
             }}
           >
             <Icon className="w-6 h-6" />
