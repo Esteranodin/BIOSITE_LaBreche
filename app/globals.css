@@ -1,33 +1,33 @@
 @import "tailwindcss";
 
 @theme {
-  /* Couleurs de base (ne changent jamais) */
   --color-blanc-casse: #FFF8F8;
   --color-noir-bleute: #00111B;
   --color-framboise: #DD2D4A;
   --color-vert: #15B097;
   --color-bleu: #087E8B;
+  --color-icon: #f7efef;
+  --color-focus: #2684FF;
 }
 
 :root {
-  /* Variables sémantiques pour mode clair */
   --color-bg-primary: #FFF8F8;
   --color-text-primary: #00111B;
-  --color-text-secondary: color-mix(in srgb, #00111B 60%, #FFF8F8);
-  --color-border: color-mix(in srgb, #00111B 20%, #FFF8F8);
+  --color-text-secondary: color-mix(in srgb, #00111B 75%, #FFF8F8);
+  --color-border: color-mix(in srgb, #00111B 35%, #FFF8F8);
   --color-gris-clair: color-mix(in srgb, #00111B 20%, #FFF8F8);
   --color-gris-moyen: color-mix(in srgb, #00111B 60%, #FFF8F8);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Variables sémantiques pour mode sombre (inversées) */
     --color-bg-primary: #00111B;
     --color-text-primary: #FFF8F8;
-    --color-text-secondary: color-mix(in srgb, #FFF8F8 60%, #00111B);
-    --color-border: color-mix(in srgb, #FFF8F8 20%, #00111B);
+    --color-text-secondary: color-mix(in srgb, #FFF8F8 65%, #00111B);
+    --color-border: color-mix(in srgb, #FFF8F8 35%, #00111B);
     --color-gris-clair: color-mix(in srgb, #FFF8F8 20%, #00111B);
     --color-gris-moyen: color-mix(in srgb, #FFF8F8 60%, #00111B);
+
   }
 }
 
@@ -35,4 +35,12 @@ body {
   background: var(--color-bg-primary);
   color: var(--color-text-primary);
   font-family: var(--font-robotoFlex), sans-serif;
+}
+
+@media (max-width: 390px) {
+  .wrap-under390 {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 }

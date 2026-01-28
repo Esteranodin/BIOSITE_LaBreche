@@ -7,33 +7,39 @@ interface ArticlePlaceholderProps {
 
 export function ArticlePlaceholder({ title, borderColor }: ArticlePlaceholderProps) {
   return (
-    <>
-      {/* Titre centré */}
-      <div className="w-full h-full flex flex-col items-center justify-center p-4 relative">
-        <p
-          className="font-bold text-sm line-clamp-3 leading-tight text-center relative z-10 transition-colors duration-300 group-hover:text-[var(--color-blanc-casse)]"
-          style={{ color: "var(--color-noir-bleute)" }}
-        >
-          {title}
-        </p>
-      </div>
-      
-      {/* Fond coloré au hover */}
+    <div className="w-full h-full relative rounded-2xl overflow-hidden">
       <div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-        style={{ background: borderColor, zIndex: 1 }}
+        className="absolute inset-0 pointer-events-none bg-[var(--color-blanc-casse)] transition-opacity duration-500 opacity-100 group-hover:opacity-0 z-30"
+        style={{ willChange: "opacity" }}
       />
-      
-      {/* Overlay "Lire l'article" */}
-      <div className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10">
-        <div
-          className="flex items-center gap-1 mb-3"
-          style={{ color: "var(--color-blanc-casse)" }}
-        >
-          <HiExternalLink size={16} />
-          <span className="text-xs font-semibold">Lire l'article</span>
+      <div
+        className="absolute inset-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+        style={{ background: borderColor, willChange: "opacity" }}
+      />
+      <h3
+        className="absolute inset-0 flex items-center justify-center font-bold text-center px-4 sm:text-sm md:text-base transition-opacity duration-700 group-hover:opacity-0 text-[var(--color-text-primary)] z-40"
+        style={{ willChange: "opacity" }}
+      >
+        {title}
+      </h3>
+      <div
+        className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/75 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end"
+        style={{ willChange: "opacity" }}
+      >
+        <div className="p-3">
+          <h3
+            className="font-bold sm:text-sm md:text-base line-clamp-2 mb-1 text-[var(--color-blanc-casse)]"
+          >
+            {title}
+          </h3>
+          <div className="flex items-center gap-1 text-[var(--color-icon)]">
+            <HiExternalLink size={12} />
+            <span className="font-medium sm:text-xs md:text-sm">
+              Lire l'article
+            </span>
+          </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

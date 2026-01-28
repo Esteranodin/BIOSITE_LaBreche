@@ -8,7 +8,7 @@ const robotoFlex = Roboto_Flex({
 });
 
 export const metadata: Metadata = {
-  title: "Journal La Brèche - liens",
+  title: "Journal La Brèche - Liens utiles",
   description: "SPA pour le journal La Brèche",
 };
 
