@@ -12,7 +12,7 @@ export function ArticlePlaceholder({
   return (
     <div className="w-full h-full relative rounded-2xl overflow-hidden">
       <div
-        className="absolute inset-0 pointer-events-none bg-[var(--color-blanc-casse)] transition-opacity duration-500 opacity-100 group-hover:opacity-0 z-30"
+        className="absolute inset-0 pointer-events-none bg-[var(--color-bg-primary)] transition-opacity duration-500 opacity-100 group-hover:opacity-0 z-30"
         style={{ willChange: "opacity" }}
       />
       <div
