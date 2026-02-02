@@ -1,9 +1,7 @@
-import React from "react";
 import {
   FaInstagram,
   FaFacebook,
   FaLinkedinIn,
-  FaXTwitter,
   FaLaptopCode 
 } from "react-icons/fa6";
 import { BiMailSend } from "react-icons/bi";
@@ -27,12 +25,6 @@ const socialLinks: SocialLink[] = [
     icon: FaLinkedinIn,
     url: "https://www.linkedin.com/company/labr%C3%A8che/",
     color: "var(--color-vert)",
-  },
-  {
-    name: "X (ex-Twitter)",
-    icon: FaXTwitter,
-    url: "https://twitter.com/journallabreche",
-    color: "var(--color-bleu)",
   },
   {
     name: "Nous contacter par email",

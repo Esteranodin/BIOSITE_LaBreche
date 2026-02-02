@@ -15,12 +15,12 @@ const mainLinks: MainLink[] = [
     icon: PiHandHeartFill,
     color: "var(--color-framboise)",
   },
-  {
-    title: "Newsletter",
-    url: "#",
-    icon: GiLetterBomb ,
-    color: "var(--color-vert)",
-  },
+  // {
+  //   title: "Newsletter",
+  //   url: "#",
+  //   icon: GiLetterBomb ,
+  //   color: "var(--color-vert)",
+  // },
 ];
 
 export function MainLinks() {
