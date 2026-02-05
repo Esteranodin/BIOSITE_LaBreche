@@ -2,7 +2,6 @@
 
 Petit site « link-in-bio » pour le Journal La Brèche. Cette version sert de page de renvoi légère qui affiche :
 
-- un en-tête responsive
 - les liens vers les réseaux sociaux
 - une grid des derniers articles du site (récupérés depuis le flux RSS)
 
