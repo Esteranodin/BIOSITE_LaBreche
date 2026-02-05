@@ -38,10 +38,7 @@ export function ArticleCard({ article, idx }: ArticleCardProps) {
               e.currentTarget.style.display = "none";
             }}
           />
-          <ArticleOverlay
-            title={article.title}
-            showTitle={true}
-          />
+          <ArticleOverlay title={article.title} showTitle={true} />
         </>
       ) : (
         <ArticlePlaceholder title={article.title} borderColor={borderColor} />
