@@ -15,7 +15,7 @@ export function ArticlePlaceholder({
         className="absolute inset-0 pointer-events-none transition-opacity duration-500 z-30"
         style={{ 
           background: borderColor,
-          opacity: 0.1,
+          opacity: 0.05,
           willChange: "opacity" 
         }}
       />
