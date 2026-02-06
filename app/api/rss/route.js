@@ -1,7 +1,7 @@
 export async function GET() {
   try {
     const response = await fetch('https://journal-labreche.fr/feed/', {
-      next: { revalidate: 60 } // Revalider le cache toutes les 60 secondes
+      next: { revalidate: 60 }
     });
 
     if (!response.ok) {

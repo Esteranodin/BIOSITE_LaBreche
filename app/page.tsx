@@ -23,7 +23,7 @@ export default function LaBreche() {
         </nav>
 
         <main>
-          {/* Statuts pour liseuses */}
+          {/* Statuts pour liseuses et lecteurs d'écrans */}
           <div
             role="status"
             aria-live="polite"

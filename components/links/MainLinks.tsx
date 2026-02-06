@@ -10,7 +10,7 @@ const mainLinks: MainLink[] = [
     color: "var(--color-bleu)",
   },
   {
-    title: "Faire un don",
+    title: "Nous soutenir",
     url: "https://donorbox.org/la-breche",
     icon: PiHandHeartFill,
     color: "var(--color-framboise)",
