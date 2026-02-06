@@ -37,6 +37,18 @@ body {
   font-family: var(--font-robotoFlex), sans-serif;
 }
 
+@media (min-width: 200px) and (max-width: 374px) {
+  h3 {
+    font-size: 0.75rem; 
+  }
+}
+
+@media (min-width: 500px) {
+  h3 {
+    font-size: 1rem; 
+  }
+}
+
 @media (max-width: 390px) {
   .wrap-under390 {
     flex-wrap: wrap;

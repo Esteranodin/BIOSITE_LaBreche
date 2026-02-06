@@ -26,7 +26,7 @@ export function ArticlePlaceholder({
       />
       
       <h3
-        className="absolute inset-0 flex items-center justify-center font-bold text-center px-4 sm:text-sm md:text-base transition-opacity duration-400 group-hover:opacity-0 text-[var(--color-text-primary)] z-40"
+        className="absolute inset-0 flex items-center justify-center font-bold text-center px-4 text-sm sm:text-base lg:text-lg transition-opacity duration-400 group-hover:opacity-0 text-[var(--color-text-primary)] z-40"
         style={{ willChange: "opacity" }}
       >
         {title}
@@ -38,8 +38,8 @@ export function ArticlePlaceholder({
       >
         <div className="p-5 mb-5">
           <div className="flex items-center gap-2 text-[var(--color-icon)]">
-            <HiExternalLink size={12} aria-hidden="true" />
-            <span className="font-medium sm:text-xs md:text-base">
+            <HiExternalLink size={15} aria-hidden="true" />
+            <span className="font-medium">
               Lire l'article
             </span>
           </div>

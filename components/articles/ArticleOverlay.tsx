@@ -17,7 +17,7 @@ export function ArticleOverlay({
       <div className="p-3">
         {showTitle && title && (
           <h3
-            className="font-bold sm:text-sm md:text-base line-clamp-2 mb-1"
+            className="font-bold text-sm sm:text-base lg:text-lg line-clamp-2 mb-1"
             style={{ color: "var(--color-blanc-casse)" }}
           >
             {title}
@@ -25,7 +25,7 @@ export function ArticleOverlay({
         )}
         <div className="flex items-center gap-1 text-[var(--color-icon)]">
           <HiExternalLink size={12} />
-          <span className="font-medium sm:text-xs md:text-sm">
+          <span className="font-medium text-xs lg:text-sm">
             Lire l'article
           </span>
         </div>
