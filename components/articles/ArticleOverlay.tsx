@@ -3,15 +3,19 @@ import { HiExternalLink } from "react-icons/hi";
 interface ArticleOverlayProps {
   title?: string;
   showTitle?: boolean;
+  isActive?: boolean;
 }
 
 export function ArticleOverlay({
   title,
   showTitle = true,
+  isActive = false,
 }: ArticleOverlayProps) {
   return (
     <div
-      className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/75 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end"
+      className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/75 to-transparent transition-opacity duration-500 flex flex-col justify-end ${
+        isActive ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+      }`}
       style={{ willChange: "opacity" }}
     >
       <div className="p-3">
