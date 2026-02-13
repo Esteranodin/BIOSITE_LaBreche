@@ -20,7 +20,7 @@ export function useFetchArticles(): UseFetchArticlesReturn {
       const response = await fetch("/api/rss");
       if (!response.ok) throw new Error("Erreur lors du chargement");
       const data = await response.json();
-      setArticles(data.articles.slice(0, 12));
+      setArticles(data.articles); 
     } catch (err) {
       setError("Impossible de charger les articles");
       console.error(err);
