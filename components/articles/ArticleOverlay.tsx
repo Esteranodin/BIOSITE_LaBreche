@@ -17,7 +17,7 @@ export function ArticleOverlay({
       <div className="p-3">
         {showTitle && title && (
           <h3
-            className="font-bold text-sm sm:text-base lg:text-lg line-clamp-2 mb-1"
+            className="font-bold line-clamp-2 mb-1"
             style={{ color: "var(--color-blanc-casse)" }}
           >
             {title}

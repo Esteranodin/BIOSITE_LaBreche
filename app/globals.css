@@ -37,15 +37,25 @@ body {
   font-family: var(--font-robotoFlex), sans-serif;
 }
 
-@media (min-width: 200px) and (max-width: 374px) {
+h3 {
+  font-size: 0.75rem; 
+}
+
+@media (min-width: 376px) and (max-width: 499px) {
   h3 {
-    font-size: 0.75rem; 
+    font-size: 0.875rem;
   }
 }
 
-@media (min-width: 500px) {
+@media (min-width: 500px) and (max-width: 1023px) {
   h3 {
-    font-size: 1rem; 
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h3 {
+    font-size: 1.125rem;
   }
 }
 
