@@ -44,10 +44,10 @@ export function ArticlePlaceholder({
         }`}
         style={{ willChange: "opacity" }}
       >
-        <div className="p-5 mb-5">
+        <div className="p-5 mb-2">
           <div className="flex items-center gap-2 text-[var(--color-icon)]">
             <HiExternalLink size={15} aria-hidden="true" />
-            <span className="font-medium">Lire l'article</span>
+            <span className="font-semibold">Lire l'article</span>
           </div>
         </div>
       </div>

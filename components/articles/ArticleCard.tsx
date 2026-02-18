@@ -1,5 +1,5 @@
 import { Article } from "@/types";
-import { getArticleColor } from "../../utils/colorRandom";
+import { getArticleColor } from "../../utils/colorCard";
 import { ArticleOverlay } from "./ArticleOverlay";
 import { ArticlePlaceholder } from "./ArticlePlaceholder";
 import { useState } from "react";
@@ -12,22 +12,22 @@ interface ArticleCardProps {
 
 export function ArticleCard({ article, idx }: ArticleCardProps) {
   const hasImage = article.displayImage && article.image;
-  const borderColor = getArticleColor(idx, article.title?.length || 0);
+  const borderColor = getArticleColor(idx);
   const borderColorWithOpacity = `color-mix(in srgb, ${borderColor} 60%, transparent)`;
   const isTouchDevice = useIsTouchDevice();
   const [isActive, setIsActive] = useState(false);
 
+  // Paliatif au hover sur mobile/tablette : on active au clic, et on désactive au mouse leave et scroll
   const handleClick = (e: React.MouseEvent) => {
     if (isTouchDevice && !isActive) {
-      e.preventDefault(); // Bloque le lien au 1er tap
+      e.preventDefault(); 
       setIsActive(true);
     }
-    // 2ème tap → le lien s'ouvre normalement
   };
 
   const handleMouseLeave = () => {
     if (isTouchDevice) {
-      setIsActive(false); // Reset quand on scroll
+      setIsActive(false); // Reset au scroll
     }
   };
 
