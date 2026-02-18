@@ -21,20 +21,29 @@ export const metadata: Metadata = {
     "indépendant",
   ],
   openGraph: {
-    title: "La Brèche - Journal libre d'enquêtes, analyses et reportages",
+    title: "La Brèche - Journal d'enquêtes, analyses et reportages",
     description: "Journal papier, libre et indépendant",
-    url: "https://journal-labreche.fr",
+    url: "https://biosite-la-breche.vercel.app",
     siteName: "La Brèche",
     locale: "fr_FR",
     type: "website",
-     images: [
+    images: [
       {
-        url: "https://journal-labreche.fr/og-image.png",
+        url: "/og-image.png",
+        width: 1200,
         height: 630,
-        alt: "Logo La Brèche - Journal libre",
-      }
+        alt: "Logo du journal La Brèche",
+      },
     ],
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "La Brèche - Journal d'enquêtes, analyses et reportages",
+    description: "Journal papier, libre et indépendant",
+    images: ["/og-image.png"],
+  },
+  authors: [{ name: "La Brèche" }],
+  metadataBase: new URL("https://biosite-la-breche.vercel.app/"),
 };
 
 export default function RootLayout({
@@ -43,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={`${robotoFlex.variable} antialiased`}>{children}</body>
     </html>
   );
