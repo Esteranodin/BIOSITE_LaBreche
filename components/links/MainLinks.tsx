@@ -35,7 +35,7 @@ export function MainLinks() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`${link.title} (ouvre un nouvel onglet)`}
-              className="flex items-center justify-center gap-3 py-4 px-6 rounded-full text-lg font-semibold tracking-wide transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-focus)] focus-visible:ring-offset-3"
+              className="flex items-center justify-center gap-3 py-4 px-6 rounded-full font-bold tracking-wide transition-all shadow-md hover:shadow-lg transform hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-focus)] focus-visible:ring-offset-3"
               style={{
                 backgroundColor: link.color,
                 color: "var(--color-icon)",
