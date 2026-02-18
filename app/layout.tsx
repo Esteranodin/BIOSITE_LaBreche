@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "La Brèche - Journal d'enquêtes, analyses et reportages",
     description: "Journal papier, libre et indépendant (sans publicité ni actionnaire). Écologie, santé publique et technocritique – les trois sont intimement liés.",
-    url: "https://biosite-la-breche.vercel.app",
+    url: "https://labreche.vercel.app/",
     siteName: "La Brèche",
     locale: "fr_FR",
     type: "website",
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   authors: [{ name: "La Brèche" }],
-  metadataBase: new URL("https://biosite-la-breche.vercel.app/"),
+  metadataBase: new URL("https://labreche.vercel.app/"),
 };
 
 export default function RootLayout({
