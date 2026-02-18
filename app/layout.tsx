@@ -10,7 +10,7 @@ const robotoFlex = Roboto_Flex({
 export const metadata: Metadata = {
   title: "Journal La Brèche - Liens utiles",
   description:
-    "Journal papier, libre et indépendant. Environnement, santé publique, technocritique. Abonnez-vous ou faites un don pour nous soutenir.",
+    "Journal papier, libre et indépendant (sans publicité ni actionnaire). Écologie, santé publique et technocritique – les trois sont intimement liés.",
   keywords: [
     "journal",
     "environnement",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "La Brèche - Journal d'enquêtes, analyses et reportages",
-    description: "Journal papier, libre et indépendant",
+    description: "Journal papier, libre et indépendant (sans publicité ni actionnaire). Écologie, santé publique et technocritique – les trois sont intimement liés.",
     url: "https://biosite-la-breche.vercel.app",
     siteName: "La Brèche",
     locale: "fr_FR",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "La Brèche - Journal d'enquêtes, analyses et reportages",
-    description: "Journal papier, libre et indépendant",
+    description: "Journal papier, libre et indépendant (sans publicité ni actionnaire). Écologie, santé publique et technocritique – les trois sont intimement liés.",
     images: ["/og-image.png"],
   },
   authors: [{ name: "La Brèche" }],
