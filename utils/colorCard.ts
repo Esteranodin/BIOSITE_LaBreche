@@ -5,7 +5,7 @@ export const ARTICLE_COLORS = [
 ];
 
 /**
- * Algo Fisher-Yates avec vrai aléatoire
+ * Algo Fisher-Yates
  */
 function shuffle<T>(array: T[]): T[] {
   const arr = [...array];
@@ -22,13 +22,17 @@ function shuffle<T>(array: T[]): T[] {
 /**
  * Attribue une couleur aléatoire, distribution équitable sur chaque groupe de 3 articles
  */
+declare global {
+  var currentColorGroup: string[] | undefined;
+}
+
 export function getArticleColor(index: number): string {
   const positionInGroup = index % 3;
   
   if (positionInGroup === 0) {
-    (globalThis as any).currentColorGroup = shuffle(ARTICLE_COLORS);
+    globalThis.currentColorGroup = shuffle(ARTICLE_COLORS);
   }
   
-  const currentGroup = (globalThis as any).currentColorGroup || shuffle(ARTICLE_COLORS);
+  const currentGroup = globalThis.currentColorGroup || shuffle(ARTICLE_COLORS);
   return currentGroup[positionInGroup];
 }

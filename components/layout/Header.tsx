@@ -14,7 +14,7 @@ export default function Header() {
         </a>
       </div>
       <h1 className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">
-        Journal libre d'enquêtes, analyses et reportages
+        Journal libre d&apos;enquêtes, analyses et reportages
       </h1>
       <p className="text-lg mb-1 text-[var(--color-text-secondary)]">
         Environnement • Santé publique • Technocritique

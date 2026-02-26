@@ -30,7 +30,7 @@ export function ArticleOverlay({
         <div className="flex items-center gap-1 text-[var(--color-icon)]">
           <HiExternalLink size={12} />
           <span className="font-semibold text-xs lg:text-sm">
-            Lire l'article
+            Lire l&apos;article
           </span>
         </div>
       </div>

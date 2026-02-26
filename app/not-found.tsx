@@ -22,7 +22,7 @@ export default function NotFound() {
                 Page non trouvée
               </h2>
               <p className="text-lg font-medium text-[var(--color-text-secondary)]">
-                La page que vous recherchez n'existe pas ou a été
+                La page que vous recherchez n&apos;existe pas ou a été
                 déplacée.
               </p>
             </div>
@@ -34,7 +34,7 @@ export default function NotFound() {
                 aria-label="Retourner à la page d'accueil"
               >
                 <HiArrowLeft className="w-5 h-5" aria-hidden="true" />
-                Retour à l'accueil
+                Retour à l&apos;accueil
               </Link>
             </div>
 

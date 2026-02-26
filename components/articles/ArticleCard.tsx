@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Article } from "@/types";
 import { getArticleColor } from "../../utils/colorCard";
 import { ArticleOverlay } from "./ArticleOverlay";
@@ -20,7 +21,7 @@ export function ArticleCard({ article, idx }: ArticleCardProps) {
   // Paliatif au hover sur mobile/tablette : on active au clic, et on désactive au mouse leave et scroll
   const handleClick = (e: React.MouseEvent) => {
     if (isTouchDevice && !isActive) {
-      e.preventDefault(); 
+      e.preventDefault();
       setIsActive(true);
     }
   };
@@ -51,22 +52,29 @@ export function ArticleCard({ article, idx }: ArticleCardProps) {
         handleMouseLeave();
       }}
     >
-      {hasImage ? (
+      {hasImage && article.image && (
         <>
-          <img
+          <Image
             src={article.image}
             alt={article.title}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            fill
+            className="object-cover transition-transform duration-500 group-hover:scale-110"
             style={{ willChange: "transform, opacity" }}
-            loading="lazy"
-            onError={(e) => {
-              e.currentTarget.style.display = "none";
-            }}
+            unoptimized
           />
-          <ArticleOverlay title={article.title} showTitle={true} isActive={isActive} />
+          <ArticleOverlay
+            title={article.title}
+            showTitle={true}
+            isActive={isActive}
+          />
         </>
-      ) : (
-        <ArticlePlaceholder title={article.title} borderColor={borderColor} isActive={isActive} />
+      )}
+      {!hasImage && (
+        <ArticlePlaceholder
+          title={article.title}
+          borderColor={borderColor}
+          isActive={isActive}
+        />
       )}
     </a>
   );
