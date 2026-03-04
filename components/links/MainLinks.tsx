@@ -15,12 +15,12 @@ const mainLinks: MainLink[] = [
     icon: PiHandHeartFill,
     color: "var(--color-framboise)",
   },
-  // {
-  //   title: "Newsletter",
-  //   url: "#",
-  //   icon: GiLetterBomb ,
-  //   color: "var(--color-vert)",
-  // },
+  {
+    title: "Newsletter",
+    url: "https://61344ea0.sibforms.com/serve/MUIFAHTXvDd60Gi-TXeZD-DNyPhPWZRwRG4G2gCPJ66Xf5MinKncRQxHzm5RDulvqtoZ8Va93-I4BLdIL73iUkEknU1in1n-eyuLI0maTATUj4hO-9yc6qvNyQdCU1FD3na4GX6LUaVHk5SouRQd9aKpnJq6wIbR66Dy0NB-zuDqbkK-C8Oe9ml7pTBJLRC5ntCeZt76vl4mjLzQ",
+    icon: GiLetterBomb ,
+    color: "var(--color-vert)",
+  },
 ];
 
 export function MainLinks() {
