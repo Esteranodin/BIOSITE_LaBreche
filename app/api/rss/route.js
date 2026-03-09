@@ -2,10 +2,8 @@ import { formatText } from '../../../utils/textFormatting';
 import { parseRSS } from '../../../utils/rssParser';
 
 const RSS_FEED_URL = 'https://journal-labreche.fr/feed/';
-const REVALIDATE_TIME = 60; 
+const REVALIDATE_TIME = 3600; 
 const MAX_ARTICLES = 12;
-
-export const dynamic = 'force-dynamic';
 
 export async function GET() {
   try {
