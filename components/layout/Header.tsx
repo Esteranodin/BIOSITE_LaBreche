@@ -10,7 +10,7 @@ export default function Header() {
           rel="noopener noreferrer"
           aria-label="Visiter le site journal-labreche.fr"
         >
-          <Logo className="w-full h-full object-cover" />
+          <Logo />
         </a>
       </div>
       <h1 className="text-2xl font-bold text-[var(--color-text-primary)] mb-2">
