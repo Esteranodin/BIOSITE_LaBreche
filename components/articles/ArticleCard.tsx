@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Article } from "@/types";
 import { getArticleColor } from "../../utils/colorCard";

@@ -42,7 +42,7 @@ export function MainLinks() {
               }}
             >
               <Icon className="w-6 h-6" />
-              <h3>{link.title}</h3>
+              <span>{link.title}</span>
             </a>
           </li>
         );

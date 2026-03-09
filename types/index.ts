@@ -12,6 +12,7 @@ export interface SocialLink {
   name: string;
   icon: IconType;
   url: string;
+  ariaLabel: string;
   color: string;
 }
 

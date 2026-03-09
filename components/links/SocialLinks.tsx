@@ -12,30 +12,35 @@ const socialLinks: SocialLink[] = [
     name: "Instagram",
     icon: FaInstagram,
     url: "https://www.instagram.com/labrechejournal/",
+    ariaLabel: "Visiter notre page Instagram (ouvre un nouvel onglet)",
     color: "var(--color-framboise)",
   },
   {
     name: "Facebook",
     icon: FaFacebook,
     url: "https://www.facebook.com/journallabreche",
+    ariaLabel: "Visiter notre page Facebook (ouvre un nouvel onglet)",
     color: "var(--color-bleu)",
   },
   {
     name: "LinkedIn",
     icon: FaLinkedinIn,
     url: "https://www.linkedin.com/company/labr%C3%A8che/",
+    ariaLabel: "Visiter notre page LinkedIn (ouvre un nouvel onglet)",
     color: "var(--color-vert)",
   },
   {
     name: "Nous contacter par email",
     icon: BiMailSend,
     url: "mailto:redaction.labreche@protonmail.com",
+    ariaLabel: "Nous contacter par email",
     color: "var(--color-framboise)",
   },
   {
     name: "Notre site",
     icon: FaLaptopCode,
     url: "https://journal-labreche.fr/",
+    ariaLabel: "Visiter notre site (ouvre un nouvel onglet)",
     color: "var(--color-vert)",
   },
 ];
@@ -56,7 +61,7 @@ export function SocialLinks() {
                 backgroundColor: "var(--color-blanc-casse)",
                 borderColor: social.color,
               }}
-              aria-label={`Visiter notre ${social.name} (ouvre un nouvel onglet)`}
+              aria-label={social.ariaLabel}
             >
               <Icon className="w-6 h-6 text-noir-bleute" />
             </a>

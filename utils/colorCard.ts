@@ -36,3 +36,7 @@ export function getArticleColor(index: number): string {
   const currentGroup = globalThis.currentColorGroup || shuffle(ARTICLE_COLORS);
   return currentGroup[positionInGroup];
 }
+
+// globalThis fonctionne car getArticleColor appelé par ArticleCard (composant client) VS SSR.
+// Si un jour besoinde l'appelé via un composant serveur, globalThis sera partagé entre toutes les requêtes → bug silencieux de couleurs.
+globalThis.currentColorGroup = shuffle(ARTICLE_COLORS);
