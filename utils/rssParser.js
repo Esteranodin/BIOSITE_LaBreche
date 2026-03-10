@@ -11,9 +11,8 @@ export function parseRSS(xmlText) {
     const title = extractTag(fullItem, 'title');
     const link = extractTag(fullItem, 'link');
     const category = extractTag(fullItem, 'category');
-    const contentEncoded = extractTag(fullItem, 'content:encoded');
 
-    const image = extractImage(contentEncoded);
+    const image = extractImage(fullItem);
     const displayImage = isRealImage(image);
 
     return {
@@ -42,13 +41,13 @@ function extractTag(xmlString, tagName) {
 }
 
 /**
- * Extrait l'URL de la première image du contenu encodé
- * @param {string} contentEncoded - Contenu HTML encodé
+ * Extrait l'image à la une depuis media:content
+ * @param {string} xmlItem - Fragment XML de l'article
  * @returns {string} URL de l'image ou chaîne vide
  */
-function extractImage(contentEncoded) {
-  const imageMatch = contentEncoded.match(/<img[^>]+src="([^">]+)"/);
-  return imageMatch ? imageMatch[1] : '';
+function extractImage(xmlItem) {
+  const match = xmlItem.match(/<media:content[^>]+url="([^"]+)"/);
+  return match ? match[1] : '';
 }
 
 /**
