@@ -4,7 +4,7 @@ interface LogoProps {
 
 export function Logo({ className }: LogoProps) {
   return (
-    <picture className="block w-full max-[768px]:w-49">
+    <picture className="block w-full max-[769px]:w-49">
       <source srcSet="/LogoRS.png" media="(max-width: 768px)" />
       <source
         srcSet="/Logo-fd-blanc.png"
