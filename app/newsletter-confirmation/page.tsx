@@ -37,11 +37,11 @@ export default function NewsletterConfirmation() {
             <div className="my-12">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 py-3 px-6 rounded-full border-2 border-[var(--color-framboise)] hover:border-[var(--color-bleu)] transition-all font-semibold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-focus)] focus-visible:ring-offset-3"
+                className="inline-flex items-center gap-2 py-3 px-6 rounded-full border-2 border-[var(--color-framboise)] hover:border-[var(--color-vert)] transition-all font-semibold focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--color-focus)] focus-visible:ring-offset-3"
                 aria-label="Retourner à la page d'accueil"
               >
                 <HiArrowLeft className="w-5 h-5" aria-hidden="true" />
-                Retour à l&apos;accueil
+                Retour
               </Link>
             </div>
           </section>
