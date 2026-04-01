@@ -1,13 +1,14 @@
 "use client";
 
-import { BREVO_SESSION_KEY } from "@/utils/backLinks";
+import { BREVO_SESSION_KEY, getFromByReferrer } from "@/utils/backLinks";
 
 const BREVO_FORM_ACTION =
   "https://61344ea0.sibforms.com/serve/MUIFAHTXvDd60Gi-TXeZD-DNyPhPWZRwRG4G2gCPJ66Xf5MinKncRQxHzm5RDulvqtoZ8Va93-I4BLdIL73iUkEknU1in1n-eyuLI0maTATUj4hO-9yc6qvNyQdCU1FD3na4GX6LUaVHk5SouRQd9aKpnJq6wIbR66Dy0NB-zuDqbkK-C8Oe9ml7pTBJLRC5ntCeZt76vl4mjLzQ";
 
 export function NewsletterForm({ from }: { from?: string }) {
   const handleSubmit = () => {
-    sessionStorage.setItem(BREVO_SESSION_KEY, from ?? "");
+    const source = from ?? getFromByReferrer() ?? "";
+    sessionStorage.setItem(BREVO_SESSION_KEY, source);
   };
 
   return (
@@ -17,6 +18,7 @@ export function NewsletterForm({ from }: { from?: string }) {
       onSubmit={handleSubmit}
       className="space-y-6 max-w-md mx-auto"
     >
+      {/* Honeypot anti-spam Brevo — invisible, doit rester vide  */}
       <input
         type="text"
         name="email_address_check"
@@ -27,6 +29,7 @@ export function NewsletterForm({ from }: { from?: string }) {
         aria-hidden="true"
         readOnly
       />
+      {/* Champs cachés requis par Brevo */}
       <input type="hidden" name="locale" value="fr" />
       <input type="hidden" name="html_type" value="simple" />
 

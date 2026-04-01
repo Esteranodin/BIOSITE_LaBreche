@@ -8,6 +8,7 @@ import {
   BACK_BUTTON_CLASS,
   DEFAULT_BACK_LINK,
   BREVO_SESSION_KEY,
+  getFromByReferrer,
   type BackLink,
 } from "@/utils/backLinks";
 
@@ -19,8 +20,13 @@ export function BackButton({ from }: { from?: string }) {
   useEffect(() => {
     if (from === undefined) {
       const stored = sessionStorage.getItem(BREVO_SESSION_KEY);
-      setBackLink(getBackLink(stored));
-      sessionStorage.removeItem(BREVO_SESSION_KEY);
+      if (stored) {
+        setBackLink(getBackLink(stored));
+        sessionStorage.removeItem(BREVO_SESSION_KEY);
+      } else {
+        const fromReferrer = getFromByReferrer();
+        if (fromReferrer) setBackLink(getBackLink(fromReferrer));
+      }
     }
   }, [from]);
 
